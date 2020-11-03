@@ -524,6 +524,18 @@ class StringMethodTests(unittest.TestCase):
         self.assertEqual(m.lstrip(inplace=True), "ACGT ")
         self.assertEqual(m, "ACGT ")
 
+    def test_str_removeprefix(self):
+        """Check matches the python string removeprefix method."""
+        self.assertRaises(TypeError, Seq("ACGT").removeprefix, 7)
+        self.assertRaises(TypeError, Seq("ACGT").removeprefix, 7.0)
+        self.assertRaises(TypeError, Seq("ACGT").removeprefix, None)
+
+    def test_str_removesuffix(self):
+        """Check matches the python string removesuffix method."""
+        self.assertRaises(TypeError, Seq("ACGT").removesuffix, 7)
+        self.assertRaises(TypeError, Seq("ACGT").removesuffix, 7.0)
+        self.assertRaises(TypeError, Seq("ACGT").removesuffix, None)
+
     def test_str_rstrip(self):
         """Check matches the python string rstrip method."""
         self._test_method("rstrip")

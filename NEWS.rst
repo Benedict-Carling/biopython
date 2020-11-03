@@ -11,14 +11,16 @@ The latest news is at the top of this file.
 (In progress, not yet released): Biopython 1.80
 ===============================================
 
+The sequence objects now have ``.removeprefix()`` and ``removesuffix`` methods
+matching that added to strings in Python 3.9.
+
 Add tests for ``UniprotIO.Parser`` qualifiers "description", "evidence" and
 "status" information for sequence features as ``SeqFeature`` qualifiers.
 
 Many thanks to the Biopython developers and community for making this release
 possible, especially the following contributors:
 
-Fixed typos of triple underscore.
-
+- Benedict Carling
 - Chenghao Zhu
 - Fabian Egli
 
